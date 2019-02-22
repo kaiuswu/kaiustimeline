@@ -1,0 +1,21 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display');
+
+/* Formatting */
+body {
+  background-color: -; linear-gradient(to right, red , yellow);?
+}
+
+h1 {
+  font-family: 'Major Mono Display', monospace;
+  color: -;
+  text-align: -;
+}
+
+p {
+  font-family: 'Cutive Mono', monospace;
+  font-size: -px;
+  color: -;
+}
+
+/* Imaging */
