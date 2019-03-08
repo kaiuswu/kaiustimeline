@@ -30,6 +30,7 @@
 /* Formatting Body [top bot px right left px] CENTER AT ALL TIMES*/
 body {
 	background-image: linear-gradient(to right, #F0EDF3, #FCFCD7);
+	box-sizing: border-box;
 }
 
 div {
@@ -49,6 +50,10 @@ top: 50%;
 }
 	#pageturn{right: 90px;}
 	#pageback{left: 90px;}
+
+figure {
+	top: 40%
+}
 
 /*Text*/
 h1 {
@@ -88,20 +93,29 @@ a:hover {
 	margin: auto;
 	width: 27%;
 }
-.center.fade img:hover {
-    opacity: 0;
+
+
+/*Hover Swap*/
+/* Make the container relative */
+.swap-on-hover {
+  position: relative;
+	margin:  auto;
+	max-width: 400px;
 }
 
-
-.center img {
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-    display: block;
+/* Select the image and make it absolute to the container */
+.swap-on-hover img {
+  position: absolute;
+  top:0%;
+  left:0%;
+	overflow: hidden;
+	width: 42%;
 }
 
-.center.fade img {
-    position: absolute;
+.swap-on-hover.swap-on-hover__front-image {
+  cursor: pointer;
 }
 
-/* Class Attributes*/
+.swap-on-hover__back-image {
+	display: none;
+}
