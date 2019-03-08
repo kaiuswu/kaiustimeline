@@ -1,21 +1,107 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Cardo|Spectral+SC');
 
-/* Formatting */
-body {
-  background-color: -; linear-gradient(to right, red , yellow);?
+/*Bordering :3*/
+#top, #bottom, #left, #right {
+	background-color:  #2F7F68;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 35px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 35px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+/*Flavor*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
+/* Formatting Body [top bot px right left px] CENTER AT ALL TIMES*/
+body {
+	background-image: linear-gradient(to right, #F0EDF3, #FCFCD7);
+}
+
+div {
+	align-content: center;
+}
+div.door {
+	animation: fadein 3s;
+	right: 30%;
+	left: 30%;
+top: 50%;
+	position: absolute;
+}
+
+#pageturn, #pageback {
+	bottom: 50px;
+	position: fixed;
+}
+	#pageturn{right: 90px;}
+	#pageback{left: 90px;}
+
+/*Text*/
 h1 {
-  font-family: 'Major Mono Display', monospace;
-  color: -;
+  font-family: 'Spectral SC', serif;
+  line-height: 25px;
+  color: #24538e;
   text-align: -;
 }
 
 p {
   font-family: 'Cutive Mono', monospace;
   font-size: -px;
-  color: -;
+  color: #24538e;
+}
+
+a:link, a:visited {
+	text-decoration: underline overline dotted red;
+  color: #3DA669;
+}
+
+a:hover {
+  color: #F0E761;
+}
+
+::selection {
+  background: #ffb7b7;
 }
 
 /* Imaging */
+
+.center {
+	display: block;
+	position: absolute;
+	top: -70%;
+	left: 30%;
+	right: 50%;
+	margin: auto;
+	width: 27%;
+}
+.center.fade img:hover {
+    opacity: 0;
+}
+
+
+.center img {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    display: block;
+}
+
+.center.fade img {
+    position: absolute;
+}
+
+/* Class Attributes*/
