@@ -13,7 +13,9 @@ $(".swap-on-hover").hover(function() {
   // $(".swap-on-hover__back-image").css("display", "inline");
   $(".swap-on-hover__front-image").toggle();
   $(".swap-on-hover__back-image").toggle();
-
+  $("")
 });
 
-console.log("hello");
+$( function() {
+  $( ".drag" ).draggable();
+} );
