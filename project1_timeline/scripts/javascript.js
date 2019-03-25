@@ -10,3 +10,9 @@ $(".swap-on-hover").hover(function() {
 $( function() {
   $( ".drag" ).draggable();
 } );
+
+$( function() {
+  $( "#tabs" ).tabs({
+      collapsible: true
+    });
+} );
