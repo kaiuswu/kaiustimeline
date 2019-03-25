@@ -42,7 +42,7 @@ div.door {
 	animation: fadein 3s;
 	right: 30%;
 	left: 30%;
-top: 50%;
+	top: 47%;
 	position: absolute;
 }
 
@@ -58,10 +58,6 @@ figure {
 	left: 40;
 }
 
-audio {
-	top:50%;
-	left:40%;
-}
 
 /*Text*/
 h1 {
@@ -91,16 +87,6 @@ p {
 		max-width: 70%;
 }
 
-
-/* @media screen and (max-width: 600px) {
-  h1 {
-    font-size: ;
-  }
-	p {
-		font-size: ;
-	}
-} */
-
 a:link, a:visited {
 	text-decoration: underline overline dotted red;
   color: #3DA669;
@@ -126,9 +112,10 @@ a:hover {
 
 .widget {
 	position: absolute;
-	top: -90%;
-	left: 30%;
+	top: -110%;
+	left: 25%;
 }
+
 
 /*Hover Swap*/
 /* Make the container relative */
@@ -170,4 +157,72 @@ a:hover {
 
 @keyframes spin {
   100% {transform: rotate(1turn); }
+}
+
+#con {
+position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+}
+#img {
+	    position: absolute;
+
+	    height: 100vh;
+	    width: 300vw;
+		}
+.fog {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #none;
+}
+.first {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 60s linear infinite;
+    }
+.second {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 40s linear infinite;
+    }
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-200vw, 0, 0); }
+}
+
+/* SUN */
+.sun {
+  position: absolute;
+	margin: auto;
+	top: 20;
+	width:300px;
+	height:300px;
+	border-radius:50%;
+	background: #fffdf7;
+	opacity:0.6;
+	box-shadow: 0px 0px 40px 15px #fffdf7;
+}
+
+.ray_box {
+  position: absolute;
+  margin: auto;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;
+  width:70px;
+  -webkit-animation: ray_anim 120s linear infinite;
+  animation: ray_anim 120s linear infinite;
+}
+
+@-webkit-keyframes ray_anim {
+		0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
 }

@@ -9,6 +9,14 @@ $(".swap-on-hover").hover(function() {
 
 $( function() {
   $( ".drag" ).draggable();
+  $( "#droppable" ).droppable({
+     drop: function( event, ui ) {
+       $( this )
+         .addClass( "ui-state-highlight" )
+         .find( "p" )
+           .html( "am greek now" );
+     }
+   });
 } );
 
 $( function() {
