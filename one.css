@@ -1,0 +1,228 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Cardo|Spectral+SC');
+
+/*Bordering :3*/
+#top, #bottom, #left, #right {
+	background-color:  #2F7F68;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 35px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 35px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+/*Flavor*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Formatting Body [top bot px right left px] CENTER AT ALL TIMES*/
+body {
+	background-image: linear-gradient(to right, #F0EDF3, #FCFCD7);
+	box-sizing: border-box;
+	max-width: 120%;
+	min-width: 40%;
+}
+
+div {
+	align-content: center;
+}
+div.door {
+	animation: fadein 3s;
+	right: 30%;
+	left: 30%;
+	top: 47%;
+	position: absolute;
+}
+
+#pageturn, #pageback {
+	bottom: 50px;
+	position: fixed;
+}
+	#pageturn{right: 90px;}
+	#pageback{left: 90px;}
+
+figure {
+	top: 50%;
+	left: 40;
+}
+
+
+/*Text*/
+h1 {
+  font-family: 'Spectral SC', serif;
+	font-size: 1.9em;
+  line-height: 25px;
+  color: #24538e;
+}
+
+p {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.2em;
+  color: #24538e;
+}
+
+#tabs {
+	font-family: "Courier New";
+	font-size: 1em;
+	color: #c291ea;
+	text-decoration: none;
+}
+
+.text {
+    border-style:solid;
+		border-width:1px;
+		min-width: 70%;
+		max-width: 70%;
+}
+
+a:link, a:visited {
+	text-decoration: underline overline dotted red;
+  color: #3DA669;
+}
+
+a:hover {
+  color: #F0E761;
+}
+
+::selection {
+  background: #ffb7b7;
+}
+
+/* Imaging */
+
+.center {
+	position: absolute;
+	top: -200%;
+	left: 17%;
+	width: 70%;
+	min-width:50%;
+}
+
+.widget {
+	position: absolute;
+	top: -110%;
+	left: 25%;
+}
+
+
+/*Hover Swap*/
+/* Make the container relative */
+.swap-on-hover {
+  position: relative;
+	margin:  auto;
+	max-width: 400px;
+}
+
+/* Select the image and make it absolute to the container */
+.swap-on-hover img {
+  position: absolute;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 120%;
+}
+
+.swap-on-hover.swap-on-hover__front-image {
+  cursor: pointer;
+}
+
+.swap-on-hover__back-image {
+	display: none;
+}
+
+.drag{
+	cursor: grab;
+	position: center, absolute;
+}
+
+.spinning {
+  position:absolute;
+  animation: spin 3s linear infinite;
+  animation-play-state: paused;
+}
+.spinning:hover {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
+#con {
+position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+}
+#img {
+	    position: absolute;
+
+	    height: 100vh;
+	    width: 300vw;
+		}
+.fog {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #none;
+}
+.first {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 60s linear infinite;
+    }
+.second {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 40s linear infinite;
+    }
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-200vw, 0, 0); }
+}
+
+/* SUN */
+.sun {
+  position: absolute;
+	margin: auto;
+	top: 20;
+	width:300px;
+	height:300px;
+	border-radius:50%;
+	background: #fffdf7;
+	opacity:0.6;
+	box-shadow: 0px 0px 40px 15px #fffdf7;
+}
+
+.ray_box {
+  position: absolute;
+  margin: auto;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;
+  width:70px;
+  -webkit-animation: ray_anim 120s linear infinite;
+  animation: ray_anim 120s linear infinite;
+}
+
+@-webkit-keyframes ray_anim {
+		0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
